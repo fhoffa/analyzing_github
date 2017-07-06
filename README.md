@@ -22,9 +22,10 @@ Updated: ~Monthly (depending on the project owner availability).
 
 ### GitHub contents
 
+A snapshot of the open source contents of GitHub, ready to be analyzed.
+
 - https://medium.com/google-cloud/github-on-bigquery-analyze-all-the-code-b3576fd2b150
 
-A snapshot of the open source contents of GitHub, ready to be analyzed.
 
 Updated: ~Weekly.
 
