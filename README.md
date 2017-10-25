@@ -48,7 +48,7 @@ Updated: ~Weekly.
 - https://medium.com/google-cloud/imports-in-java-from-2013-to-2016-winners-and-losers-2a9640056022
 - https://medium.com/google-cloud/static-javascript-code-analysis-within-bigquery-ed0e3011732c
 - https://medium.com/google-cloud/github-archive-fully-updated-notice-some-breaking-changes-64e7e7cd0967
-
+- https://medium.com/@hoffa/the-top-contributors-to-github-2017-be98ab854e87
 
 
 ### Disclaimer
