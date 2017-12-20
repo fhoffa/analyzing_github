@@ -55,13 +55,15 @@ There's many ways to count this. One of them:
     ) a RIGHT JOIN (
       SELECT repo.name AS repo_with_stars, APPROX_COUNT_DISTINCT(actor.id) stars 
       FROM `githubarchive.month.201706` 
+      WHERE type='WatchEvent'
       GROUP BY 1 
       HAVING stars > 15
     ) b
     ON a.repo_in_mirror = b.repo_with_stars
     LIMIT 10
 
-The results say that 6 months ago (June 2017) 35,567 repositories got more than 15 stars. Of those 35,567 repositories, 49.97% are mirrored on `bigquery-public-data.github_repos.contents`.
+The results say that 6 months ago (June 2017) 21,890 repositories got more than 15 stars. Of those 21,890 repositories, 
+~53.86% are mirrored on `bigquery-public-data.github_repos.contents`.
 
 ### How do you refresh the data? Do you use a selected list of projects or do you refresh the list each time?
 
