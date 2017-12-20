@@ -31,7 +31,45 @@ Updated: ~Weekly.
 
 -----
 
-### Articles
+# FAQ
+
+## GitHub contents
+
+### Could you please share more information regarding which projects are available via BQ?
+
+The `bigquery-public-data.github_repos.contents` table only contains the copy of ASCII files that are less than 10MB. To be included, projects need to be open source (as determined by GitHub's License API).
+
+### Do you provide forked repos? or only non-forked?
+
+Mostly non-forked.
+
+### Which percentage of the repositories of GitHub exit’s on the data set?
+
+There's many ways to count this. One of them:
+
+    SELECT COUNT(repo_with_stars) repos_with_stars
+      , 100*ROUND(COUNT(repo_in_mirror)/COUNT(repo_with_stars), 4) percentage_in_mirror
+    FROM (
+      SELECT DISTINCT repo_name AS repo_in_mirror
+      FROM `bigquery-public-data.github_repos.files` 
+    ) a RIGHT JOIN (
+      SELECT repo.name AS repo_with_stars, APPROX_COUNT_DISTINCT(actor.id) stars 
+      FROM `githubarchive.month.201706` 
+      GROUP BY 1 
+      HAVING stars > 15
+    ) b
+    ON a.repo_in_mirror = b.repo_with_stars
+    LIMIT 10
+
+The results say that 6 months ago (June 2017) 35,567 repositories got more than 15 stars. Of those 35,567 repositories, 49.97% are mirrored on `bigquery-public-data.github_repos.contents`.
+
+### How do you refresh the data? Do you use a selected list of projects or do you refresh the list each time?
+
+The pipeline looks periodically for new projects. Old projects that change their license to a valid open source one (according to the API) might be missed and there's an option to add them manually.
+
+-----
+
+# Articles
 
 ## Misc (to be organized)
 
