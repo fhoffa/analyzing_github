@@ -43,7 +43,7 @@ The `bigquery-public-data.github_repos.contents` table only contains the copy of
 
 Mostly non-forked.
 
-### Which percentage of the repositories of GitHub exit’s on the data set?
+### Which percentage of the repositories of GitHub exists on the data set?
 
 There's many ways to count this. One of them:
 
