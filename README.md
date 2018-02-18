@@ -90,6 +90,27 @@ The pipeline looks periodically for new projects. Old projects that change their
 - https://medium.com/google-cloud/github-archive-fully-updated-notice-some-breaking-changes-64e7e7cd0967
 - https://medium.com/@hoffa/the-top-contributors-to-github-2017-be98ab854e87
 
+## Bonus: pypi top Python breakthrough install 2018/02 vs 2017/01
+
+To be blogged... 
+
+```
+SELECT file.project, COUNT(*) pypi_201802_c, ANY_VALUE(b.rn_201701) rn_201701
+FROM `the-psf.pypi.downloads201802*` a
+LEFT JOIN (SELECT project, ROW_NUMBER() OVER(ORDER BY pypi_c DESC) rn_201701 FROM (
+  SELECT file.project, COUNT(*) pypi_c
+  FROM `the-psf.pypi.downloads201701*` 
+  GROUP BY 1 ORDER BY 2 DESC
+  LIMIT 10000
+)) b
+ON a.file.project=b.project 
+WHERE b.rn_201701 IS null OR b.rn_201701>500
+GROUP BY 1 ORDER BY 2 DESC
+LIMIT 300
+```
+
+
+
 
 ### Disclaimer
 
