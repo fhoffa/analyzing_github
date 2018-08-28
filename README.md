@@ -4,11 +4,12 @@ A growing collection of what I know about analyzing GitHub with BigQuery and oth
 
 ## Main datasets
 
-### GitHub Archive
+### GH Archive 
 
 A log of all public events happening on GitHub.
 
 - https://www.githubarchive.org/
+- https://bigquery.cloud.google.com/table/githubarchive:month.201808
 
 Updated: Hourly
 
@@ -17,6 +18,7 @@ Updated: Hourly
 A relational dataset that adds more data from GitHub's knowledge graph:
 
 - http://ghtorrent.org/gcloud.html
+- https://bigquery.cloud.google.com/table/ghtorrent-bq:ght_2018_04_01.users
 
 Updated: ~Monthly (depending on the project owner availability).
 
@@ -25,7 +27,7 @@ Updated: ~Monthly (depending on the project owner availability).
 A snapshot of the open source contents of GitHub, ready to be analyzed.
 
 - https://medium.com/google-cloud/github-on-bigquery-analyze-all-the-code-b3576fd2b150
-
+- https://bigquery.cloud.google.com/table/bigquery-public-data:github_repos.files
 
 Updated: ~Weekly.
 
