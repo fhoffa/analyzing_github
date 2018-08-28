@@ -2,7 +2,7 @@
 
 A growing collection of what I know about analyzing GitHub with BigQuery and other tools
 
-## Main datasets
+## Main datasets in BigQuery
 
 ### GH Archive 
 
