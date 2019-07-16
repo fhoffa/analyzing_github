@@ -78,9 +78,9 @@ The pipeline looks periodically for new projects. Old projects that change their
 ## Misc (to be organized)
 
 - https://medium.com/google-cloud/github-on-bigquery-analyze-all-the-code-b3576fd2b150
-- https://hackernoon.com/winning-arguments-with-data-leading-with-commas-in-sql-672b3b81eac9
-- https://hackernoon.com/some-coders-like-it-hot-but-most-prefer-colder-climates-4703c3f02fbb
-- https://hackernoon.com/the-map-i-got-for-africa-8c8a958c686d
+- https://towardsdatascience.com/winning-arguments-with-data-leading-with-commas-in-sql-672b3b81eac9
+- https://medium.com/@hoffa/some-coders-like-it-hot-but-most-prefer-colder-climates-4703c3f02fbb
+- https://medium.com/@hoffa/the-map-i-got-for-africa-8c8a958c686d
 - https://medium.com/@hoffa/the-top-github-projects-per-country-92c275e19409
 - https://medium.com/@hoffa/the-top-weekend-languages-according-to-githubs-code-6022ea2e33e8
 - https://medium.com/google-cloud/sla-slo-explored-with-github-and-bigquery-e6a135919a8e
