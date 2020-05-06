@@ -22,6 +22,13 @@ A relational dataset that adds more data from GitHub's knowledge graph:
 
 Updated: ~Monthly (depending on the project owner availability).
 
+---
+
+Note: Hasn't been updated since 2019-06. The latest upload is here:
+
+- https://twitter.com/ghtorrent/status/1222529377629605889
+- https://console.cloud.google.com/bigquery?project=ghtorrentmysql1906&p=ghtorrentmysql1906&d=MySQL1906&page=dataset
+
 ### GitHub contents
 
 A snapshot of the open source contents of GitHub, ready to be analyzed.
